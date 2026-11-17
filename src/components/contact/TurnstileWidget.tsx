@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
-import { TURNSTILE_SITE_KEY } from "@/lib/turnstileConfig";
+import { TURNSTILE_CONFIG_URL, TURNSTILE_SITE_KEY } from "@/lib/turnstileConfig";
 
 const SCRIPT_ID = "cf-turnstile-script";
 const SCRIPT_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
@@ -25,6 +25,24 @@ function loadTurnstile(): Promise<void> {
   return scriptPromise;
 }
 
+/**
+ * The site key to use: the server's answer (so it can be changed in the
+ * server's settings without a rebuild), else the key built into the site.
+ */
+let siteKeyPromise: Promise<string> | null = null;
+function getSiteKey(): Promise<string> {
+  if (!siteKeyPromise) {
+    siteKeyPromise = fetch(TURNSTILE_CONFIG_URL, { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: { siteKey?: string } | null) => data?.siteKey || TURNSTILE_SITE_KEY)
+      .catch(() => {
+        siteKeyPromise = null; // ask again on the next mount
+        return TURNSTILE_SITE_KEY;
+      });
+  }
+  return siteKeyPromise;
+}
+
 export type TurnstileHandle = {
   /** Gets a fresh token. Tokens are single-use, so call after every submit. */
   reset: () => void;
@@ -46,6 +64,7 @@ const TurnstileWidget = forwardRef<TurnstileHandle, Props>(({ action, onToken },
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
   const [failed, setFailed] = useState(false);
+  const [missingKey, setMissingKey] = useState(false);
 
   // Keep the latest callback without re-rendering the widget when it changes.
   const onTokenRef = useRef(onToken);
@@ -61,17 +80,21 @@ const TurnstileWidget = forwardRef<TurnstileHandle, Props>(({ action, onToken },
   }));
 
   useEffect(() => {
-    if (!TURNSTILE_SITE_KEY) {
-      console.error("Turnstile: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set.");
-      return;
-    }
-
     let cancelled = false;
-    loadTurnstile()
-      .then(() => {
-        if (cancelled || !containerRef.current || !window.turnstile) return;
+    getSiteKey()
+      .then((siteKey) => {
+        if (cancelled) return null;
+        if (!siteKey) {
+          console.error("Turnstile: no site key (TURNSTILE_SITE_KEY / NEXT_PUBLIC_TURNSTILE_SITE_KEY) is set.");
+          setMissingKey(true);
+          return null;
+        }
+        return loadTurnstile().then(() => siteKey);
+      })
+      .then((siteKey) => {
+        if (!siteKey || cancelled || !containerRef.current || !window.turnstile) return;
         widgetIdRef.current = window.turnstile.render(containerRef.current, {
-          sitekey: TURNSTILE_SITE_KEY,
+          sitekey: siteKey,
           action,
           callback: (token) => onTokenRef.current(token),
           "expired-callback": () => onTokenRef.current(null),
@@ -92,7 +115,7 @@ const TurnstileWidget = forwardRef<TurnstileHandle, Props>(({ action, onToken },
   return (
     <div>
       <div ref={containerRef} />
-      {(failed || !TURNSTILE_SITE_KEY) && (
+      {(failed || missingKey) && (
         <p className="text-sm text-red-600" role="alert">
           The security check could not load. Please disable any ad or script blocker for this site and refresh the page.
         </p>

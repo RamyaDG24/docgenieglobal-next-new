@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // AWS Lambda build output (aws/build-lambda.mjs)
+    "aws/dist/**",
   ]),
 ]);
 

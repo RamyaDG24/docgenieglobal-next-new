@@ -1,7 +1,27 @@
 import type { NextConfig } from "next";
 
+// AWS Lambda build only: aws/build-lambda.mjs sets LAMBDA_BUILD=1. When it is
+// unset (the normal EC2 `next build` / `next start`), nothing below applies.
+const isLambdaBuild = process.env.LAMBDA_BUILD === "1";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  ...(isLambdaBuild && {
+    // A self-contained server (.next/standalone) that the Lambda runs.
+    output: "standalone",
+    outputFileTracingExcludes: {
+      "*": [
+        // Never ship the contact-form error log (people's contact details).
+        "logs/**",
+        // Only used by next/image, which the site does not use; the binaries
+        // are also built for the wrong CPU for an arm64 Lambda.
+        "node_modules/sharp/**",
+        "node_modules/@img/**",
+        // Not needed at runtime: the standalone server embeds the config.
+        "node_modules/typescript/**",
+      ],
+    },
+  }),
   trailingSlash: true,
 
   // Singular-to-plural typo fix: /solution -> /solutions
