@@ -46,6 +46,14 @@ const FAQ = () => {
       answer: "White label telemedicine is typically priced as a subscription or per-provider license fee rather than a flat rate — cost depends on provider count, branding depth, EHR/EMR integration needs, compliance scope, and support tier. DocGenie Global offers custom pricing based on your organization's size and requirements; contact us for a tailored quote."
     },
     {
+      question: "Does the platform provide an API for building a custom mobile app?",
+      answer: "Yes. The platform exposes integration points covering patient and provider profiles, appointments and availability, clinical encounters, orders and e-prescriptions subject to jurisdictional rules, claims and billing metadata, and audit logs. Integration guides are issued and environments provisioned during onboarding. Available endpoints and integration patterns are confirmed during technical discovery, based on your existing systems and implementation scope."
+    },
+    {
+      question: "How does onboarding work if we want to integrate the platform with our own systems?",
+      answer: "Onboarding runs in stages: discovery of requirements and regulatory constraints, a technical design review covering multi-tenant or single-tenant deployment, API enablement with environment provisioning, identity/SSO configuration and endpoint whitelisting alongside white-label branding, then go-live once security controls and monitoring are confirmed. You can start with a focused scope such as scheduling plus video visits and expand later."
+    },
+    {
       question: "Is it better to buy a white label telemedicine platform or build one in-house?",
       answer: "For most healthcare organizations, licensing a white label platform is faster and more cost-effective than building in-house. In-house development requires sustained investment in HIPAA compliance, security audits, and infrastructure, while a white label platform like DocGenie Global can launch substantially faster, with security and compliance capabilities already built into the HIPAA-compliant platform. Implementation timelines depend on branding, integrations, workflows and customer readiness."
     }

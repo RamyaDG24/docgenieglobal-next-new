@@ -149,6 +149,22 @@ export const whiteLabelSchemaData = {
         },
         {
           "@type": "Question",
+          "name": "Does the platform provide an API for building a custom mobile app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The platform exposes integration points covering patient and provider profiles, appointments and availability, clinical encounters, orders and e-prescriptions subject to jurisdictional rules, claims and billing metadata, and audit logs. Integration guides are issued and environments provisioned during onboarding. Available endpoints and integration patterns are confirmed during technical discovery, based on your existing systems and implementation scope."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does onboarding work if we want to integrate the platform with our own systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Onboarding runs in stages: discovery of requirements and regulatory constraints, a technical design review covering multi-tenant or single-tenant deployment, API enablement with environment provisioning, identity/SSO configuration and endpoint whitelisting alongside white-label branding, then go-live once security controls and monitoring are confirmed. You can start with a focused scope such as scheduling plus video visits and expand later."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Is it better to buy a white label telemedicine platform or build one in-house?",
           "acceptedAnswer": {
             "@type": "Answer",
