@@ -1,14 +1,18 @@
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
 
-// next/jest wires up SWC transforms, the "@/*" path alias from tsconfig,
-// CSS/image stubs and next/font — so no babel or ts-jest config is needed.
+// next/jest wires up SWC transforms, CSS/image stubs and next/font — so no
+// babel or ts-jest config is needed. The "@/*" alias is mapped below.
 const createJestConfig = nextJest({ dir: "./" });
 
 const config: Config = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testMatch: ["**/__tests__/**/*.test.[jt]s?(x)"],
+  // AWS Lambda build output (aws/build-lambda.mjs) holds a copy of the app.
+  modulePathIgnorePatterns: ["<rootDir>/aws/dist/"],
+  // The "@/*" path alias from tsconfig.json.
+  moduleNameMapper: { "^@/(.*)$": "<rootDir>/src/$1" },
 };
 
 export default createJestConfig(config);

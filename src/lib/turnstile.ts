@@ -10,18 +10,26 @@ const MAX_TOKEN_LENGTH = 2048;
  * back to Cloudflare's documented always-pass test secret, whose responses
  * carry no meaningful action or hostname, so those checks only apply here.
  */
-const HAS_REAL_SECRET = Boolean(process.env.TURNSTILE_SECRET_KEY);
+/**
+ * TURNSTILE_TEST_MODE=1 switches to Cloudflare's always-pass test keys on any
+ * host, e.g. to test the contact form on the Lambda's own address. It turns the
+ * bot check off in effect, so it is only for testing: remove it afterwards.
+ * Empty keys alone never do this in production (see SECRET_KEY below).
+ */
+export const TEST_MODE = process.env.TURNSTILE_TEST_MODE === "1";
+const TEST_SECRET_KEY = "1x0000000000000000000000000000000AA";
+
+const HAS_REAL_SECRET = !TEST_MODE && Boolean(process.env.TURNSTILE_SECRET_KEY);
 
 /**
  * In production TURNSTILE_SECRET_KEY must be set, otherwise every submission
  * is rejected: failing closed is deliberate, so a missing key can never
  * quietly turn the bot check off.
  */
-const SECRET_KEY =
-    process.env.TURNSTILE_SECRET_KEY ||
-    (process.env.NODE_ENV === "production"
-        ? ""
-        : "1x0000000000000000000000000000000AA");
+const SECRET_KEY = TEST_MODE
+    ? TEST_SECRET_KEY
+    : process.env.TURNSTILE_SECRET_KEY ||
+      (process.env.NODE_ENV === "production" ? "" : TEST_SECRET_KEY);
 
 /**
  * Frontend hostnames this deployment accepts tokens from, comma-separated in
@@ -59,6 +67,9 @@ export async function verifyTurnstile(
     expectedAction: string,
     remoteIp?: string
 ): Promise<boolean> {
+    if (TEST_MODE) {
+        console.warn("Turnstile: TEST MODE is on (TURNSTILE_TEST_MODE=1); test keys accepted. Remove it after testing.");
+    }
     if (!SECRET_KEY) {
         console.error("Turnstile: TURNSTILE_SECRET_KEY is not set; rejecting submission.");
         return false;

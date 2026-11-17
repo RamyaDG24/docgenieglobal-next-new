@@ -2,6 +2,13 @@ import { promises as fs } from "fs";
 import path from "path";
 
 const LOG_DIR = path.join(process.cwd(), "logs");
+
+/**
+ * On AWS Lambda the disk is read-only (except /tmp, which is wiped), so the
+ * entry goes to the console instead, which lands in the Lambda's own log group.
+ * Everywhere else (EC2, local dev) it is still appended to logs/contact-errors.log.
+ */
+const ON_LAMBDA = Boolean(process.env.AWS_LAMBDA_FUNCTION_NAME);
 const LOG_FILE = path.join(LOG_DIR, "contact-errors.log");
 
 type ContactLogEntry = {
@@ -36,8 +43,6 @@ export async function logContactError(
     error: unknown
 ): Promise<void> {
     try {
-        await fs.mkdir(LOG_DIR, { recursive: true });
-
         const entry = {
             timestamp: formatIST(new Date()),
             error:
@@ -55,6 +60,12 @@ export async function logContactError(
             },
         };
 
+        if (ON_LAMBDA) {
+            console.error("CONTACT_FORM_ERROR " + JSON.stringify(entry));
+            return;
+        }
+
+        await fs.mkdir(LOG_DIR, { recursive: true });
         await fs.appendFile(LOG_FILE, JSON.stringify(entry) + "\n", "utf8");
     } catch (logErr) {
         // Never let a logging failure crash the request
