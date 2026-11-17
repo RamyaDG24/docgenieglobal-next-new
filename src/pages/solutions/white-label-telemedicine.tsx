@@ -26,8 +26,8 @@ const WhiteLabelTelemedicine = () => {
   return (
     <Layout>
       <Head>
-        <title>White Label Telemedicine Platform | HIPAA-Compliant | DocGenie Global</title>
-        <meta name="description" content="Launch a HIPAA-compliant white label telemedicine and telehealth platform for clinics, hospitals, and healthcare providers. Your brand, domain, patient portal, and care workflows. Request a demo." />
+        <title>White Label Telemedicine Platform | Live in Weeks | DocGenie</title>
+        <meta name="description" content="License and rebrand a HIPAA-compliant telemedicine platform — your logo, domain and patient portal. Live in weeks, not months. Book a demo." />
         <link rel="canonical" href="https://www.docgenieglobal.com/solutions/white-label-telemedicine/" />
         <link rel="preload" as="image" href="/lovable-uploads/9e6e81c2-be85-41ae-9ba0-dfbb95ee96f3.png" />
 
