@@ -337,7 +337,7 @@ const GhanaWhiteLabelPage = () => (
                 <div className="container mx-auto px-8">
                     <h2 id="gh-quick-answer-heading" className="text-lg font-semibold text-brand-blue mb-2">Quick Answer — White Label Telemedicine Platform Ghana</h2>
                     <p className="text-gray-700">
-                        A white label telemedicine platform for Ghana is a branded virtual care solution that enables clinics, hospitals, and digital health companies to offer online consultations, patient payments, and patient management under their own brand — without building technology from scratch. Mobile-money and card-payment integration options can be assessed based on the provider's preferred payment services and implementation scope. DocGenie Global provides a fully customisable platform designed with Ghana's Data Protection Act 2012 (Act 843) and Ghana Health Service (GHS) considerations in mind. Implementation timelines depend on branding, workflows, integrations, configuration and provider readiness.
+                        A white label telemedicine platform for Ghana is a branded virtual care solution that enables clinics, hospitals, and digital health companies to offer online consultations, patient payments, and patient management under their own brand — without building technology from scratch. Mobile-money and card-payment integration options can be assessed based on the provider&apos;s preferred payment services and implementation scope. DocGenie Global provides a fully customisable platform designed with Ghana&apos;s Data Protection Act 2012 (Act 843) and Ghana Health Service (GHS) considerations in mind. Implementation timelines depend on branding, workflows, integrations, configuration and provider readiness.
                     </p>
                     <p className="text-sm text-gray-500 mt-2">Last updated: August 03, 2026</p>
                 </div>
@@ -350,12 +350,12 @@ const GhanaWhiteLabelPage = () => (
                 <div className="py-10 bg-white">
                     <div className="container mx-auto px-8">
                         <div className="text-center">
-                            <h2 className="heading-3 mb-6">Built for Ghana's Healthcare Providers and Digital Health Companies</h2>
+                            <h2 className="heading-3 mb-6">Built for Ghana&apos;s Healthcare Providers and Digital Health Companies</h2>
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
-                                Ghana's healthcare sector is evolving rapidly. Patients in urban centres like Accra and Kumasi expect digital access to care. Patients in peri-urban and rural areas need healthcare services that work on mobile phones with modest data connectivity. Ghanaians in the diaspora want trusted access to healthcare providers back home. The National Health Insurance Authority (NHIA) administers Ghana's National Health Insurance Scheme (NHIS), which provides coverage for millions of Ghanaians — and digital care access is increasingly part of how providers extend their services.<br /><br />
-                                DocGenie Global's white label telemedicine platform helps Medical and Dental Council (MDC)-registered practitioners and healthcare organisations meet all of these needs under their own brand. The platform can support:
+                                Ghana&apos;s healthcare sector is evolving rapidly. Patients in urban centres like Accra and Kumasi expect digital access to care. Patients in peri-urban and rural areas need healthcare services that work on mobile phones with modest data connectivity. Ghanaians in the diaspora want trusted access to healthcare providers back home. The National Health Insurance Authority (NHIA) administers Ghana&apos;s National Health Insurance Scheme (NHIS), which provides coverage for millions of Ghanaians — and digital care access is increasingly part of how providers extend their services.<br /><br />
+                                DocGenie Global&apos;s white label telemedicine platform helps Medical and Dental Council (MDC)-registered practitioners and healthcare organisations meet all of these needs under their own brand. The platform can support:
                             </p>
                             <ul>
                                 <li>Private clinics and specialist practices</li>
@@ -367,7 +367,7 @@ const GhanaWhiteLabelPage = () => (
                                 <li>Digital health startups and healthtech companies</li>
                                 <li>Multi-location clinic networks</li>
                             </ul>
-                            <p className="text-lg text-gray-700">Your patients book, consult, pay, and receive follow-ups — all under your brand, not a third-party app's.</p>
+                            <p className="text-lg text-gray-700">Your patients book, consult, pay, and receive follow-ups — all under your brand, not a third-party app&apos;s.</p>
                         </div>
                     </div>
                 </div>
@@ -384,7 +384,7 @@ const GhanaWhiteLabelPage = () => (
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
-                                Mobile-money services are widely used in Ghana and may be relevant when designing patient-payment journeys. A telemedicine platform for Ghana should make it simple for patients to pay for consultations without friction. Mobile-money and card-payment integration options can be assessed based on the provider's preferred payment services and implementation scope, which may include:
+                                Mobile-money services are widely used in Ghana and may be relevant when designing patient-payment journeys. A telemedicine platform for Ghana should make it simple for patients to pay for consultations without friction. Mobile-money and card-payment integration options can be assessed based on the provider&apos;s preferred payment services and implementation scope, which may include:
                             </p>
                             <ul>
                                 <li>Mobile-money payment options commonly used in Ghana</li>
@@ -434,11 +434,11 @@ const GhanaWhiteLabelPage = () => (
                 <div className="py-10 bg-white">
                     <div className="container mx-auto px-8">
                         <div className="text-center">
-                            <h2 className="heading-3 mb-6">Patient Data Privacy and Ghana's Data Protection Act 2012</h2>
+                            <h2 className="heading-3 mb-6">Patient Data Privacy and Ghana&apos;s Data Protection Act 2012</h2>
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
-                                Ghana's Data Protection Act 2012 (Act 843) governs the collection, storage, and processing of personal data — including patient health information. The Data Protection Commission (DPC) oversees compliance, and healthcare providers operating digital health services in Ghana must handle patient data responsibly and in accordance with these obligations. Ghana Health Service (GHS) guidelines further inform responsible digital health practice for practitioners registered with the Medical and Dental Council (MDC).<br /><br />
+                                Ghana&apos;s Data Protection Act 2012 (Act 843) governs the collection, storage, and processing of personal data — including patient health information. The Data Protection Commission (DPC) oversees compliance, and healthcare providers operating digital health services in Ghana must handle patient data responsibly and in accordance with these obligations. Ghana Health Service (GHS) guidelines further inform responsible digital health practice for practitioners registered with the Medical and Dental Council (MDC).<br /><br />
                                 DocGenie Global is designed with these regulatory considerations in mind:
                             </p>
                             <ul>
@@ -450,7 +450,7 @@ const GhanaWhiteLabelPage = () => (
                                 <li>Audit-ready digital records</li>
                             </ul>
                             <p className="text-lg text-gray-700">
-                                Final compliance with Ghana's Data Protection Act 2012, the Data Protection Commission, and any Ghana Health Service guidance depends on each provider's organisational setup, legal agreements, and implementation configuration. Each provider remains responsible for their own data protection obligations and any applicable registrations.
+                                Final compliance with Ghana&apos;s Data Protection Act 2012, the Data Protection Commission, and any Ghana Health Service guidance depends on each provider&apos;s organisational setup, legal agreements, and implementation configuration. Each provider remains responsible for their own data protection obligations and any applicable registrations.
                             </p>
                         </div>
                     </div>
@@ -473,7 +473,7 @@ const GhanaWhiteLabelPage = () => (
                             </p>
                             <ul>
                                 <li>Branded appointment booking on your own domain or subdomain</li>
-                                <li>Online consultation access with your clinic's visual identity</li>
+                                <li>Online consultation access with your clinic&apos;s visual identity</li>
                                 <li>Branded patient dashboard</li>
                                 <li>Branded provider dashboard</li>
                                 <li>Clinic-branded email, SMS, and WhatsApp communications</li>
@@ -523,7 +523,7 @@ const GhanaWhiteLabelPage = () => (
 
                             <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-2">Chronic Disease Management</h3>
                             <p className="text-lg text-gray-700">
-                                Support recurring consultations and monitoring for patients managing diabetes, hypertension, cardiovascular conditions, and other long-term health conditions. Branded platforms improve <Link href="/blogs/patient-retention-branded-telemedicine">patient retention for chronic care</Link> by keeping every interaction within your clinic's recognised environment.
+                                Support recurring consultations and monitoring for patients managing diabetes, hypertension, cardiovascular conditions, and other long-term health conditions. Branded platforms improve <Link href="/blogs/patient-retention-branded-telemedicine">patient retention for chronic care</Link> by keeping every interaction within your clinic&apos;s recognised environment.
                             </p>
 
                             <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-2">Specialist Follow-Up Consultations</h3>
@@ -541,7 +541,7 @@ const GhanaWhiteLabelPage = () => (
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="heading-3 mb-6">Why Ghana's Healthcare Providers Choose DocGenie Global</h2>
+                        <h2 className="heading-3 mb-6">Why Ghana&apos;s Healthcare Providers Choose DocGenie Global</h2>
                     </div>
                     <div className="prose my-8">
                         <p className="text-lg text-gray-700">
@@ -561,7 +561,7 @@ const GhanaWhiteLabelPage = () => (
                                 <tr className="border-b border-gray-200">
                                     <td className="p-4 font-medium">Branding</td>
                                     <td className="p-4 text-center">Third-party interface</td>
-                                    <td className="p-4 text-center bg-brand-blue/30">Your clinic's brand experience</td>
+                                    <td className="p-4 text-center bg-brand-blue/30">Your clinic&apos;s brand experience</td>
                                 </tr>
                                 <tr className="border-b border-gray-200 bg-gray-50">
                                     <td className="p-4 font-medium">Payment Options</td>

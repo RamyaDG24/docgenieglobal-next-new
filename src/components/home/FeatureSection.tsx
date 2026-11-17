@@ -10,7 +10,6 @@ import {
   Users, 
   BarChart 
 } from "lucide-react";
-import LazyImage from "@/components/common/LazyImage";
 
 const FeatureSection = () => {
   const features = [

@@ -66,12 +66,16 @@ function loadGA(): void {
 function loadClarity() {
     if (!isAnalyticsAllowedHost()) return;
 
-    const w = window as any;
     if (window.clarity || document.getElementById("clarity-loaded")) return;
 
-    w.clarity = function (...args: any[]) {
-        (w.clarity.q = w.clarity.q || []).push(args);
-    };
+    // Clarity's standard queue stub: calls are kept until the script loads.
+    const clarity = Object.assign(
+        (...args: unknown[]) => {
+            clarity.q.push(args);
+        },
+        { q: [] as unknown[][] }
+    );
+    window.clarity = clarity;
 
     const s = document.createElement("script");
     s.id = "clarity-loaded";
@@ -97,17 +101,21 @@ function loadLinkedIn() {
     if (!isLinkedInConfigured()) return;
     if (document.getElementById("linkedin-loaded")) return;
 
-    const w = window as any;
+    const w = window;
 
     w._linkedin_partner_id = LINKEDIN_PARTNER_ID;
     w._linkedin_data_partner_ids = w._linkedin_data_partner_ids || [];
     w._linkedin_data_partner_ids.push(w._linkedin_partner_id);
 
     if (!w.lintrk) {
-        w.lintrk = function (a: any, b: any) {
-            (w.lintrk.q = w.lintrk.q || []).push([a, b]);
-        };
-        w.lintrk.q = [];
+        // LinkedIn's standard queue stub: calls are kept until the script loads.
+        const lintrk = Object.assign(
+            (command: string, data?: Record<string, unknown>) => {
+                lintrk.q.push([command, data]);
+            },
+            { q: [] as unknown[] }
+        );
+        w.lintrk = lintrk;
     }
 
     const s = document.createElement("script");
@@ -166,8 +174,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
     // Live changes via the banner or the revisit-consent widget.
     useEffect(() => {
-        function handleConsentUpdate(e: any) {
-            const accepted: string[] = e?.detail?.accepted || [];
+        function handleConsentUpdate(e: Event) {
+            const detail = (e as CustomEvent<{ accepted?: string[] }>).detail;
+            const accepted: string[] = detail?.accepted || [];
 
             const analyticsLoaded =
                 document.getElementById(GA_SCRIPT_ID) ||

@@ -13,15 +13,16 @@ import RelatedArticles from './RelatedArticles';
 import SocialSharing from './SocialSharing';
 import { useScrollTracking } from './useScrollTracking';
 import { useBlogLinkTracking } from './useBlogLinkTracking';
+import type { BlogPost, BlogSection } from '@/data/blogs/types';
 
 export default function BlogPostView({
   blog,
   sections,
   allBlogs
 }: {
-  blog: any;         // use your BlogPost type here
-  sections: any[];   // section list with id/title/content
-  allBlogs: any[];
+  blog: BlogPost;
+  sections: BlogSection[];
+  allBlogs: BlogPost[];
 }) {
   const activeSection = useScrollTracking(sections, false);
 

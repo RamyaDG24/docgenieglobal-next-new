@@ -36,11 +36,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
   forceLazy = true,
   onLoad,
   priority = 'auto',
-  componentName,
-  imagePurpose,
   sizes,
   srcSet,
-  placeholderSrc,
   onError,
   forceEager,
   ...props
@@ -109,7 +106,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
              style={{ aspectRatio: width && height ? `${width}/${height}` : 'auto' }} />
       )}
 
-      <img ref={imgRef} {...imgProps} />
+      <img ref={imgRef} {...imgProps} alt={alt} />
 
       {error && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-red-500 text-sm">

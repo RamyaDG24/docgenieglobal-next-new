@@ -302,7 +302,7 @@ const ukWhiteLabelPage = () => (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="reveal flex flex-col items-center lg:items-start text-center lg:text-left">
                             <h1 className="heading-2 mb-6">Telehealth Platform for UK Private Clinics and GP Practices</h1>
-                            <p className="text-lg text-gray-700 mb-8 max-w-2xl prose"><a href="/">DocGenie Global</a> helps healthcare providers in the UK launch branded virtual care platforms for online consultations, patient booking, provider workflows, follow-ups, and digital care delivery. Built on our <a href="/solutions/white-label-telemedicine/">global white-label telemedicine platform</a>, it allows private clinics, specialist practices, and healthcare companies to create their own branded patient experience across web and mobile.<br /><br />Whether you are building a private GP consultation service, specialist follow-up model, mental health consultation platform, or hybrid care offering, DocGenie Global gives you the foundation to launch and manage virtual care under your own brand.
+                            <p className="text-lg text-gray-700 mb-8 max-w-2xl prose"><Link href="/">DocGenie Global</Link> helps healthcare providers in the UK launch branded virtual care platforms for online consultations, patient booking, provider workflows, follow-ups, and digital care delivery. Built on our <Link href="/solutions/white-label-telemedicine/">global white-label telemedicine platform</Link>, it allows private clinics, specialist practices, and healthcare companies to create their own branded patient experience across web and mobile.<br /><br />Whether you are building a private GP consultation service, specialist follow-up model, mental health consultation platform, or hybrid care offering, DocGenie Global gives you the foundation to launch and manage virtual care under your own brand.
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                                 <Link href="/contact" data-hero-cta onClick={() => trackEvent({ event: "cta_click", cta_text: "See the platform with your branding", cta_location: "uk_wlt_hero", page_path: window.location.pathname })}>
@@ -532,7 +532,7 @@ const ukWhiteLabelPage = () => (
                             <p className="text-lg text-gray-700">Offer convenient online consultations for patients looking for private access to healthcare support, including same-day or next-day appointment availability that NHS waiting times may not allow.</p>
 
                             <h3>Specialist Follow-Ups</h3>
-                            <p className="text-lg text-gray-700">Support dermatology, women's health, cardiology, endocrinology, and other specialist follow-up consultations under your clinic's brand. See our <Link href="/blogs/white-label-telemedicine-specialty-care/">guide to white label telemedicine for specialty care</Link> for specialty-specific platform requirements.</p>
+                            <p className="text-lg text-gray-700">Support dermatology, women&apos;s health, cardiology, endocrinology, and other specialist follow-up consultations under your clinic&apos;s brand. See our <Link href="/blogs/white-label-telemedicine-specialty-care/">guide to white label telemedicine for specialty care</Link> for specialty-specific platform requirements.</p>
 
                             <h3>Mental Health and Therapy</h3>
                             <p className="text-lg text-gray-700">Enable secure virtual consultations for therapy, counselling, psychiatry, and ongoing mental health support. Learn more in our <Link href="/blogs/white-label-telemedicine-mental-health-practices/">guide to white label telemedicine for mental health practices</Link> about the specific platform requirements for this care setting.</p>
@@ -575,7 +575,7 @@ const ukWhiteLabelPage = () => (
                                 <tr className="border-b border-gray-200">
                                     <td className="p-4 font-medium">Branding</td>
                                     <td className="p-4 text-center">Third-party interface</td>
-                                    <td className="p-4 text-center bg-brand-blue/30">Your clinic's brand experience</td>
+                                    <td className="p-4 text-center bg-brand-blue/30">Your clinic&apos;s brand experience</td>
                                 </tr>
                                 <tr className="border-b border-gray-200 bg-gray-50">
                                     <td className="p-4 font-medium">Patient Journey</td>

@@ -1,7 +1,5 @@
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const LeadMarketSection = () => {
-    const isMobile = useIsMobile();
 
     return (
         <section className="py-16 bg-gray-50">

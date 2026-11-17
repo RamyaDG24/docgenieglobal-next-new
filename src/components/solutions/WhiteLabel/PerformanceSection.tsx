@@ -1,10 +1,8 @@
 
 import React from "react";
 import { Gauge, Shield, PieChart } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const PerformanceSection = () => {
-  const isMobile = useIsMobile();
   
   return (
     <div className="py-16 bg-gradient-to-r from-brand-blue/10 to-brand-orange/10">

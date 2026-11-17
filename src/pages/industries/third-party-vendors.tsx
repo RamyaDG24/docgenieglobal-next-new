@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
-import { Building, Palette, Zap, Users, DollarSign, Shield, Globe, ChevronRight, CheckCircle, HelpCircle, Settings, Clock } from "lucide-react";
+import { Building, Palette, Zap, DollarSign, Globe, ChevronRight, CheckCircle, HelpCircle, Settings, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // import LazyImage from "@/components/common/LazyImage";
 // import heroImage from "@/assets/images/third-party-vendors-office.jpg";

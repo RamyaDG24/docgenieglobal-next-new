@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Monitor, ShieldCheck, MessageCircle, HeartPulse, Brain, Globe } from "lucide-react";
+import { ChevronDown, Monitor, ShieldCheck, MessageCircle, HeartPulse, Brain } from "lucide-react";
 import { getButtonA11yProps } from "@/utils/accessibilityUtils";
 
 interface SolutionsDropdownProps {

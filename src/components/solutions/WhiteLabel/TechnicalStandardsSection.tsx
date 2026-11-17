@@ -1,10 +1,8 @@
 
 import { ShieldCheck, Code2, Network } from "lucide-react";
 // UserCheck, ClipboardCheck, Expand Icons
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const TechnicalStandardsSection = () => {
-  const isMobile = useIsMobile();
   
   return (
     <section className="py-10 sm:py-16 md:py-24">

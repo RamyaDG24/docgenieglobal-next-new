@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Hospital, Building, Users, HouseHeart } from "lucide-react";
+import { ChevronDown, Hospital, Building, Users } from "lucide-react";
 import { getButtonA11yProps } from "@/utils/accessibilityUtils";
 
 interface IndustriesDropdownProps {

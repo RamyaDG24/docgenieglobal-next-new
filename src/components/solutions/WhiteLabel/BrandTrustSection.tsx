@@ -1,10 +1,8 @@
 
 import React from "react";
 import { Paintbrush, Link as LinkIcon, Smartphone } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const BrandTrustSection = () => {
-  const isMobile = useIsMobile();
   
   return (
     <div className="py-16 bg-white">
@@ -23,7 +21,7 @@ const BrandTrustSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-4 text-center">Complete Brand Customization</h3>
             <p className="text-gray-600">
-              Fully customize colors, logos, typography, and interface elements to match your healthcare organization's visual identity.
+              Fully customize colors, logos, typography, and interface elements to match your healthcare organization&apos;s visual identity.
             </p>
           </div>
           

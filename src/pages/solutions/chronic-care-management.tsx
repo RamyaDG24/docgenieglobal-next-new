@@ -8,7 +8,7 @@ import FAQ from "@/components/solutions/ChronicCare/FAQ";
 import RelatedSolutions from "@/components/solutions/RelatedSolutions";
 import Head from "next/head";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Stethoscope, ClipboardList, Activity, BarChart3, Shield, Users, ArrowRight } from "lucide-react";
+import { Stethoscope, ClipboardList, Activity, BarChart3, Shield, Users } from "lucide-react";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
 const ChronicCareManagement = () => {
@@ -125,7 +125,7 @@ const ChronicCareManagement = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Continuous Remote Monitoring</h3>
               <p className="text-gray-600">
-                Connect with patients' health metrics in real-time through integrated devices and patient-reported outcomes to proactively address health changes.
+                Connect with patients&apos; health metrics in real-time through integrated devices and patient-reported outcomes to proactively address health changes.
               </p>
             </div>
             
@@ -135,7 +135,7 @@ const ChronicCareManagement = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Personalized Care Plans</h3>
               <p className="text-gray-600">
-                Create and manage customized care plans that adjust to each patient's unique needs, conditions, and progress over time.
+                Create and manage customized care plans that adjust to each patient&apos;s unique needs, conditions, and progress over time.
               </p>
             </div>
             

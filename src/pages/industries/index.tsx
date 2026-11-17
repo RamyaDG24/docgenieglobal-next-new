@@ -367,7 +367,7 @@ const Industries = () => {
           <h2 className="heading-2 text-brand-gray-dark mb-6">
             Ready to Transform Healthcare in Your Industry?
           </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Let's discuss how our telemedicine solution can be customised for your specific industry needs and use cases.</p>
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Let&apos;s discuss how our telemedicine solution can be customised for your specific industry needs and use cases.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="primary-button">

@@ -118,7 +118,7 @@ const TestimonialCarousel = () => {
                 
                 {/* Review text with smooth transitions */}
                 <p className="text-gray-700 leading-relaxed flex-grow mb-6 text-base transition-colors duration-300 group-hover:text-gray-800 text-center">
-                  "{review.review}"
+                  &quot;{review.review}&quot;
                 </p>
                 
                 {/* Rating with smooth hover effects */}
