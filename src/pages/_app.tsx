@@ -1,6 +1,10 @@
+// Legacy stylesheet from the site's earlier React version. Imported before
+// globals.css to keep the old order (it used to be a <link> placed ahead of the
+// site's CSS). Its rules are unlayered, so they still beat Tailwind v4's layered
+// utilities, exactly as before.
+import "@/styles/original.css";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import { Poppins } from "next/font/google";
 import { useCallback, useEffect, useSyncExternalStore } from "react";
 import { hasAnalyticsConsent, hasMarketingConsent } from "@/lib/consent";
@@ -211,9 +215,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
         <div className={poppins.className}>
-            <Head>
-                <link rel="stylesheet" href="/assets/original.css" />
-            </Head>
             <Component {...pageProps} />
         </div>
     );
