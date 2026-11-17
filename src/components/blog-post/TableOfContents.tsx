@@ -44,12 +44,8 @@ const TableOfContents = ({ sections, activeSection }: TableOfContentsProps) => {
       });
 
       // Update the URL hash without triggering a jump
-      if (window.history && typeof window.history.replaceState === 'function') {
-        const base = window.location.pathname + window.location.search;
-        window.history.replaceState(null, '', `${base}#${sectionId}`);
-      } else {
-        window.location.hash = sectionId;
-      }
+      const base = window.location.pathname + window.location.search;
+      window.history.replaceState(null, '', `${base}#${sectionId}`);
     } else {
       console.warn(`Section element with ID "${sectionId}" not found in DOM`);
     }

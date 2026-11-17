@@ -34,12 +34,15 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  // close menus when path changes
-  useEffect(() => {
+  // Close menus when the path changes (React's "adjust state while rendering"
+  // pattern: compare with the previous path instead of using an effect).
+  const [prevPath, setPrevPath] = useState(currentPath);
+  if (prevPath !== currentPath) {
+    setPrevPath(currentPath);
     setIsMobileMenuOpen(false);
     setSolutionsDropdownOpen(false);
     setIndustriesDropdownOpen(false);
-  }, [currentPath]);
+  }
 
   return (
     <header
