@@ -77,9 +77,17 @@ const MobileAppApiSection = () => {
         >
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mb-10 md:mb-12">
-                    <h2 id="mobile-api-heading" className="heading-3 mb-4 sm:mb-6">
-                        Mobile app and API onboarding
-                    </h2>
+                    {/* Spacing lives on wrapper divs, not on the headings and
+                        paragraphs themselves: /assets/original.css ships an unlayered
+                        reset that zeroes the margin on h1-h6, p and similar elements,
+                        and unlayered rules beat Tailwind v4's layered utilities, so a
+                        margin utility placed directly on a heading or paragraph is
+                        silently dropped site-wide. */}
+                    <div className="mb-4 sm:mb-6">
+                        <h2 id="mobile-api-heading" className="heading-3">
+                            Mobile app and API onboarding
+                        </h2>
+                    </div>
                     <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         You can run your branded virtual care service as a mobile experience for
                         patients and integrate the platform with your own systems through its API.
@@ -98,9 +106,11 @@ const MobileAppApiSection = () => {
                                 <Smartphone className="h-3 w-3 sm:h-4 sm:w-4 text-brand-blue" />
                             </div>
                             <div className="ml-3 sm:ml-4">
-                                <h3 className="text-base sm:text-lg font-semibold mb-1 text-left">
-                                    Branded mobile experience
-                                </h3>
+                                <div className="mb-1">
+                                    <h3 className="text-base sm:text-lg font-semibold text-left">
+                                        Branded mobile experience
+                                    </h3>
+                                </div>
                                 <p className="text-sm sm:text-base text-gray-600 text-left">
                                     The patient-facing app is a high-performance, native-style
                                     Progressive Web App (PWA) carrying your logo, colours and domain.
@@ -116,9 +126,11 @@ const MobileAppApiSection = () => {
                                 <KeyRound className="h-3 w-3 sm:h-4 sm:w-4 text-brand-blue" />
                             </div>
                             <div className="ml-3 sm:ml-4">
-                                <h3 className="text-base sm:text-lg font-semibold mb-1 text-left">
-                                    Identity, SSO and session handoff
-                                </h3>
+                                <div className="mb-1">
+                                    <h3 className="text-base sm:text-lg font-semibold text-left">
+                                        Identity, SSO and session handoff
+                                    </h3>
+                                </div>
                                 <p className="text-sm sm:text-base text-gray-600 text-left">
                                     The platform integrates with most enterprise identity providers via
                                     SAML or OIDC. Single sign-on and session handoff are validated
@@ -134,9 +146,11 @@ const MobileAppApiSection = () => {
                                 <Code2 className="h-3 w-3 sm:h-4 sm:w-4 text-brand-blue" />
                             </div>
                             <div className="ml-3 sm:ml-4">
-                                <h3 className="text-base sm:text-lg font-semibold mb-1 text-left">
-                                    Start focused, expand later
-                                </h3>
+                                <div className="mb-1">
+                                    <h3 className="text-base sm:text-lg font-semibold text-left">
+                                        Start focused, expand later
+                                    </h3>
+                                </div>
                                 <p className="text-sm sm:text-base text-gray-600 text-left">
                                     You do not have to integrate everything at once. You can launch with
                                     a focused scope — for example scheduling plus video visits — and add
@@ -156,10 +170,12 @@ const MobileAppApiSection = () => {
                                 What the API covers
                             </h3>
                         </div>
-                        <p className="text-sm sm:text-base text-gray-600 mb-5 text-left">
-                            Integration patterns are designed around the data your systems already
-                            hold. The domains typically in scope are:
-                        </p>
+                        <div className="mb-5">
+                            <p className="text-sm sm:text-base text-gray-600 text-left">
+                                Integration patterns are designed around the data your systems
+                                already hold. The domains typically in scope are:
+                            </p>
+                        </div>
                         <ul className="space-y-2">
                             {apiDomains.map((domain) => (
                                 <li key={domain} className="flex items-start text-gray-700">
@@ -168,18 +184,22 @@ const MobileAppApiSection = () => {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-xs sm:text-sm text-gray-500 mt-5 text-left">
-                            Which domains apply, and the exact integration approach, depend on your
-                            existing systems, available APIs and implementation scope.
-                        </p>
+                        <div className="mt-5">
+                            <p className="text-xs sm:text-sm text-gray-500 text-left">
+                                Which domains apply, and the exact integration approach, depend on
+                                your existing systems, available APIs and implementation scope.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 {/* Onboarding path */}
                 <div className="mt-12 md:mt-16">
-                    <h3 className="text-lg sm:text-xl font-semibold mb-6 text-left">
-                        How API onboarding works
-                    </h3>
+                    <div className="mb-6">
+                        <h3 className="text-lg sm:text-xl font-semibold text-left">
+                            How API onboarding works
+                        </h3>
+                    </div>
                     <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {onboardingStages.map((stage, index) => (
                             <li
