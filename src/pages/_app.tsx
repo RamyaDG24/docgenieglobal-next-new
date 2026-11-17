@@ -1,6 +1,10 @@
+// Legacy stylesheet from the site's earlier React version. Imported before
+// globals.css to keep the old order (it used to be a <link> placed ahead of the
+// site's CSS). Its rules are unlayered, so they still beat Tailwind v4's layered
+// utilities, exactly as before.
+import "@/styles/original.css";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import { Poppins } from "next/font/google";
 import { useCallback, useEffect, useSyncExternalStore } from "react";
 import { hasAnalyticsConsent, hasMarketingConsent } from "@/lib/consent";
@@ -66,12 +70,16 @@ function loadGA(): void {
 function loadClarity() {
     if (!isAnalyticsAllowedHost()) return;
 
-    const w = window as any;
     if (window.clarity || document.getElementById("clarity-loaded")) return;
 
-    w.clarity = function (...args: any[]) {
-        (w.clarity.q = w.clarity.q || []).push(args);
-    };
+    // Clarity's standard queue stub: calls are kept until the script loads.
+    const clarity = Object.assign(
+        (...args: unknown[]) => {
+            clarity.q.push(args);
+        },
+        { q: [] as unknown[][] }
+    );
+    window.clarity = clarity;
 
     const s = document.createElement("script");
     s.id = "clarity-loaded";
@@ -97,17 +105,21 @@ function loadLinkedIn() {
     if (!isLinkedInConfigured()) return;
     if (document.getElementById("linkedin-loaded")) return;
 
-    const w = window as any;
+    const w = window;
 
     w._linkedin_partner_id = LINKEDIN_PARTNER_ID;
     w._linkedin_data_partner_ids = w._linkedin_data_partner_ids || [];
     w._linkedin_data_partner_ids.push(w._linkedin_partner_id);
 
     if (!w.lintrk) {
-        w.lintrk = function (a: any, b: any) {
-            (w.lintrk.q = w.lintrk.q || []).push([a, b]);
-        };
-        w.lintrk.q = [];
+        // LinkedIn's standard queue stub: calls are kept until the script loads.
+        const lintrk = Object.assign(
+            (command: string, data?: Record<string, unknown>) => {
+                lintrk.q.push([command, data]);
+            },
+            { q: [] as unknown[] }
+        );
+        w.lintrk = lintrk;
     }
 
     const s = document.createElement("script");
@@ -166,8 +178,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
     // Live changes via the banner or the revisit-consent widget.
     useEffect(() => {
-        function handleConsentUpdate(e: any) {
-            const accepted: string[] = e?.detail?.accepted || [];
+        function handleConsentUpdate(e: Event) {
+            const detail = (e as CustomEvent<{ accepted?: string[] }>).detail;
+            const accepted: string[] = detail?.accepted || [];
 
             const analyticsLoaded =
                 document.getElementById(GA_SCRIPT_ID) ||
@@ -202,9 +215,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
         <div className={poppins.className}>
-            <Head>
-                <link rel="stylesheet" href="/assets/original.css" />
-            </Head>
             <Component {...pageProps} />
         </div>
     );

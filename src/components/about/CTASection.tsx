@@ -10,7 +10,7 @@ const CTASection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-3 mb-4">Join Us in Transforming Healthcare</h2>
           <p className="subtitle mb-8 max-w-2xl mx-auto">
-            Whether you're looking to partner with us, join our team, or learn more about our mission, we'd love to hear from you.
+            Whether you&apos;re looking to partner with us, join our team, or learn more about our mission, we&apos;d love to hear from you.
           </p>
           <div className="flex justify-center">
             <Link href="/contact">

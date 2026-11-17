@@ -44,7 +44,7 @@ const IntegrationGuide = () => {
               </p>
               
               <p className="text-gray-700 mb-6">
-                Whether you're a healthcare provider, public health organization, or ecosystem partner, this page explains how we connect DocGenie's end-to-end telemedicine platform to your systems, brand, and workflows.
+                Whether you&apos;re a healthcare provider, public health organization, or ecosystem partner, this page explains how we connect DocGenie&apos;s end-to-end telemedicine platform to your systems, brand, and workflows.
               </p>
 
               <p className="text-gray-700 mb-4"><strong>Who this is for:</strong></p>
@@ -101,7 +101,7 @@ const IntegrationGuide = () => {
 
               <p className="text-gray-700 mb-2"><strong>Webhooks:</strong> Event-driven notifications (e.g., appointment booked, consult started/ended, prescription issued, claim status changed).</p>
               <p className="text-gray-700 mb-2"><strong>SSO / Identity:</strong> SAML 2.0, OpenID Connect (OIDC), and JWT-based session handoff. Role-based access controls (RBAC) configurable per tenant.</p>
-              <p className="text-gray-700 mb-2"><strong>Embeds:</strong> Secure iFrames and deep links for launching specific flows (e.g., "Start Consult", "Schedule Visit") from your portal.</p>
+              <p className="text-gray-700 mb-2"><strong>Embeds:</strong> Secure iFrames and deep links for launching specific flows (e.g., &quot;Start Consult&quot;, &quot;Schedule Visit&quot;) from your portal.</p>
               <p className="text-gray-700 mb-6"><strong>Data Exchange:</strong> Batch imports/exports (CSV/NDJSON) and scheduled SFTP for migration or reporting.</p>
 
               <h2 className="text-xl font-semibold mt-8 mb-4">4) Common Integration Patterns</h2>
@@ -201,7 +201,7 @@ const IntegrationGuide = () => {
               <p className="text-gray-700 mb-4">Yes. You can launch with a focused scope (e.g., scheduling + video visits) and add features over time.</p>
 
               <p className="text-gray-700 mb-2"><strong>Q: Do you support our existing identity provider?</strong></p>
-              <p className="text-gray-700 mb-4">We integrate with most enterprise IdPs via SAML/OIDC. We'll review details during the Technical Overview Call.</p>
+              <p className="text-gray-700 mb-4">We integrate with most enterprise IdPs via SAML/OIDC. We&apos;ll review details during the Technical Overview Call.</p>
 
               <p className="text-gray-700 mb-2"><strong>Q: How do you handle data residency?</strong></p>
               <p className="text-gray-700 mb-4">Our standard policy is to ensure data residency and compliance with the hosting regions as well as the specific requirements of our customers as part of the contracting and architectural design.</p>
@@ -215,9 +215,9 @@ const IntegrationGuide = () => {
               <h2 className="text-xl font-semibold mt-8 mb-4">14) Getting Started</h2>
               <p className="text-gray-700 mb-2">Contact us to schedule an exploratory call.</p>
               <p className="text-gray-700 mb-2">Share your integration priorities (systems, identity, data flows, compliance).</p>
-              <p className="text-gray-700 mb-4">We'll propose a solution architecture and onboarding plan tailored to your context.</p>
+              <p className="text-gray-700 mb-4">We&apos;ll propose a solution architecture and onboarding plan tailored to your context.</p>
               <p className="text-gray-700 mb-6 italic">
-                If you'd like, I can also create a shorter, marketing-friendly version for your homepage or a PDF handout that mirrors this structure.
+                If you&apos;d like, I can also create a shorter, marketing-friendly version for your homepage or a PDF handout that mirrors this structure.
               </p>
             </div>
 

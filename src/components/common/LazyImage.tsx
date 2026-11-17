@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 
 interface LazyImageProps {
@@ -36,32 +36,31 @@ const LazyImage: React.FC<LazyImageProps> = ({
   forceLazy = true,
   onLoad,
   priority = 'auto',
-  componentName,
-  imagePurpose,
   sizes,
   srcSet,
-  placeholderSrc,
   onError,
   forceEager,
   ...props
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  // A new src starts unloaded again (React's "adjust state while rendering"
+  // pattern: compare with the previous src instead of using an effect).
+  const [prevSrc, setPrevSrc] = useState(src);
+  if (prevSrc !== src) {
+    setPrevSrc(src);
+    setIsLoaded(false);
+    setError(false);
+  }
 
-  // After hydration, check if the image is already loaded (e.g. from browser cache).
-  // In SSR/Next.js, onLoad can fire before React attaches event handlers,
-  // so the image may already be complete by the time this component hydrates.
-  useEffect(() => {
-    if (imgRef.current?.complete && imgRef.current?.naturalWidth > 0) {
+  // When the <img> is attached, check if it is already loaded (e.g. from the
+  // browser cache): in SSR/Next.js, onLoad can fire before React attaches its
+  // event handlers, so the image may already be complete at hydration.
+  const imgRef = useCallback((img: HTMLImageElement | null) => {
+    if (img?.complete && img.naturalWidth > 0) {
       setIsLoaded(true);
     }
   }, []);
-
-  useEffect(() => {
-    setIsLoaded(false);
-    setError(false);
-  }, [src]);
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
@@ -109,7 +108,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
              style={{ aspectRatio: width && height ? `${width}/${height}` : 'auto' }} />
       )}
 
-      <img ref={imgRef} {...imgProps} />
+      <img ref={imgRef} {...imgProps} alt={alt} />
 
       {error && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-red-500 text-sm">

@@ -1,9 +1,7 @@
 
 import React from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const ImplementationSection = () => {
-  const isMobile = useIsMobile();
   
   return (
     <div className="py-16 bg-white">

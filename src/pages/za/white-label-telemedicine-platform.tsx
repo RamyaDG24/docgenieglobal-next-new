@@ -284,7 +284,7 @@ const SouthAfricaWhiteLabelPage = () => (
                         <div className="reveal flex flex-col items-center lg:items-start text-center lg:text-left">
                             <h1 className="heading-2 mb-6">Telemedicine Platform for Healthcare Providers in South Africa</h1>
                             <p className="text-lg text-gray-700 mb-8 max-w-2xl prose">
-                                <a href="/">DocGenie Global</a> helps private clinics, hospitals, specialist practices, and digital health companies in South Africa launch their own branded virtual care platform. Our <a href="/solutions/white-label-telemedicine/">white label telemedicine solution</a> delivers secure online consultations, medical aid billing support, POPIA-aligned data workflows, and a fully branded patient experience across web and mobile.<br /><br />
+                                <Link href="/">DocGenie Global</Link> helps private clinics, hospitals, specialist practices, and digital health companies in South Africa launch their own branded virtual care platform. Our <Link href="/solutions/white-label-telemedicine/">white label telemedicine solution</Link> delivers secure online consultations, medical aid billing support, POPIA-aligned data workflows, and a fully branded patient experience across web and mobile.<br /><br />
                                 Whether you run a GP practice in Johannesburg, a specialist clinic in Cape Town, a multi-location hospital group, an occupational health service, or a digital health startup — DocGenie Global gives you the technology foundation to launch quickly, serve patients under your own brand, and scale with confidence.
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -358,12 +358,12 @@ const SouthAfricaWhiteLabelPage = () => (
                 <div className="py-10 bg-white">
                     <div className="container mx-auto px-8">
                         <div className="text-center">
-                            <h2 className="heading-3 mb-6">Built for South Africa's Private Healthcare Market</h2>
+                            <h2 className="heading-3 mb-6">Built for South Africa&apos;s Private Healthcare Market</h2>
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
                                 South Africa has an established medical-scheme market alongside private-pay and employer-supported healthcare services — yet private healthcare providers face mounting pressure to offer digital access to care, complex billing requirements, and infrastructure challenges including load shedding and uneven connectivity that generic telehealth platforms were not designed to solve.<br /><br />
-                                DocGenie Global's white label telemedicine platform is built to address South Africa's specific market realities. The platform can support:
+                                DocGenie Global&apos;s white label telemedicine platform is built to address South Africa&apos;s specific market realities. The platform can support:
                             </p>
                             <ul>
                                 <li>Private GP and family medicine practices</li>
@@ -375,7 +375,7 @@ const SouthAfricaWhiteLabelPage = () => (
                                 <li>Chronic disease management programmes</li>
                                 <li>Digital health startups and healthtech companies</li>
                             </ul>
-                            <p className="text-lg text-gray-700">Your patients book, consult, pay — and receive follow-up care — all under your brand, not a third-party app's interface. Learn more about <Link href="/blogs/telemedicine-platform-branding-patient-trust">how branded telemedicine builds more patient trust</Link> than generic platforms. Comparing vendors? Start with our <Link href="/blogs/white-label-telemedicine-platform-south-africa-buyers-guide">white label telemedicine buyer's guide for South African care providers</Link>.</p>
+                            <p className="text-lg text-gray-700">Your patients book, consult, pay — and receive follow-up care — all under your brand, not a third-party app&apos;s interface. Learn more about <Link href="/blogs/telemedicine-platform-branding-patient-trust">how branded telemedicine builds more patient trust</Link> than generic platforms. Comparing vendors? Start with our <Link href="/blogs/white-label-telemedicine-platform-south-africa-buyers-guide">white label telemedicine buyer&apos;s guide for South African care providers</Link>.</p>
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@ const SouthAfricaWhiteLabelPage = () => (
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
-                                The Protection of Personal Information Act (POPIA, Act 4 of 2013) governs how South African organisations collect, store, process, and share personal information — including sensitive patient health data. Healthcare providers operating telemedicine services in South Africa must ensure their digital platforms handle patient data in accordance with POPIA's eight conditions for lawful processing.<br /><br />
+                                The Protection of Personal Information Act (POPIA, Act 4 of 2013) governs how South African organisations collect, store, process, and share personal information — including sensitive patient health data. Healthcare providers operating telemedicine services in South Africa must ensure their digital platforms handle patient data in accordance with POPIA&apos;s eight conditions for lawful processing.<br /><br />
                                 DocGenie Global is designed to support POPIA-aligned data workflows:
                             </p>
                             <ul>
@@ -405,7 +405,7 @@ const SouthAfricaWhiteLabelPage = () => (
                                 <li>Privacy-by-design architecture</li>
                             </ul>
                             <p className="text-lg text-gray-700">
-                                Final POPIA compliance is each organisation's responsibility and depends on their specific implementation, Information Officer designation, PAIA manual, data processing agreements, and operational setup. DocGenie Global supports the technical foundation — your legal and compliance team should confirm alignment with your obligations.
+                                Final POPIA compliance is each organisation&apos;s responsibility and depends on their specific implementation, Information Officer designation, PAIA manual, data processing agreements, and operational setup. DocGenie Global supports the technical foundation — your legal and compliance team should confirm alignment with your obligations.
                             </p>
                         </div>
                     </div>
@@ -423,10 +423,10 @@ const SouthAfricaWhiteLabelPage = () => (
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
-                                Medical-aid billing is central to South Africa's private healthcare sector, and patients expect to use their scheme benefits for virtual consultations just as they would for in-person visits. Medical-aid billing workflow requirements can be assessed during implementation, based on your existing systems and configuration:
+                                Medical-aid billing is central to South Africa&apos;s private healthcare sector, and patients expect to use their scheme benefits for virtual consultations just as they would for in-person visits. Medical-aid billing workflow requirements can be assessed during implementation, based on your existing systems and configuration:
                             </p>
                             <ul>
-                                <li>Connection with a provider's existing billing or practice-management systems, assessed during implementation</li>
+                                <li>Connection with a provider&apos;s existing billing or practice-management systems, assessed during implementation</li>
                                 <li>Requirements for ICD-10 and procedure-code capture confirmed during product discovery</li>
                                 <li>Medical-aid billing workflow requirements evaluated against your scheme and configuration needs</li>
                                 <li>Payment integration requirements assessed based on your preferred gateway, banking arrangements and implementation scope</li>
@@ -450,7 +450,7 @@ const SouthAfricaWhiteLabelPage = () => (
                         </div>
                         <div className="prose my-8">
                             <p className="text-lg text-gray-700">
-                                Load shedding remains a daily operational reality for South African healthcare providers and patients. Power outages disrupt broadband routers, affect clinic infrastructure, and interrupt video calls mid-consultation. A telemedicine platform for this market should account for South Africa's energy and connectivity landscape.<br /><br />
+                                Load shedding remains a daily operational reality for South African healthcare providers and patients. Power outages disrupt broadband routers, affect clinic infrastructure, and interrupt video calls mid-consultation. A telemedicine platform for this market should account for South Africa&apos;s energy and connectivity landscape.<br /><br />
                                 Connectivity, fallback communication and continuity requirements are reviewed during technical discovery. Availability of the following depends on the selected configuration and implementation scope:
                             </p>
                             <ul>
@@ -511,7 +511,7 @@ const SouthAfricaWhiteLabelPage = () => (
                             <p className="text-lg text-gray-700">Offer convenient online consultations for script renewals, follow-ups, and non-emergency care — reducing in-clinic demand and improving patient access for members on medical aid and self-pay patients.</p>
 
                             <h3>Specialist Consultations</h3>
-                            <p className="text-lg text-gray-700">Support dermatology, psychiatry, cardiology, endocrinology, women's health, and other specialties with branded online consultation workflows, reducing patient travel time and improving specialist capacity. See our <Link href="/blogs/white-label-telemedicine-specialty-care">guide to white label telemedicine for specialty care</Link> for specialty-specific platform requirements.</p>
+                            <p className="text-lg text-gray-700">Support dermatology, psychiatry, cardiology, endocrinology, women&apos;s health, and other specialties with branded online consultation workflows, reducing patient travel time and improving specialist capacity. See our <Link href="/blogs/white-label-telemedicine-specialty-care">guide to white label telemedicine for specialty care</Link> for specialty-specific platform requirements.</p>
 
                             <h3>Mental Health and Psychology</h3>
                             <p className="text-lg text-gray-700">Create a private, accessible virtual environment for therapy, counselling, psychiatric consultations, and ongoing mental health support — reducing the stigma associated with in-person visits. Learn more in our <Link href="/blogs/white-label-telemedicine-mental-health-practices">guide to white label telemedicine for mental health practices</Link>.</p>
@@ -558,7 +558,7 @@ const SouthAfricaWhiteLabelPage = () => (
                                 <tr className="border-b border-gray-200">
                                     <td className="p-4 font-medium">Branding</td>
                                     <td className="p-4 text-center">Third-party interface</td>
-                                    <td className="p-4 text-center bg-brand-blue/30">Your clinic's brand experience</td>
+                                    <td className="p-4 text-center bg-brand-blue/30">Your clinic&apos;s brand experience</td>
                                 </tr>
                                 <tr className="border-b border-gray-200 bg-gray-50">
                                     <td className="p-4 font-medium">Medical Aid Billing</td>

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 interface BenefitsChartProps {
   type: "noshow" | "time" | "satisfaction";
@@ -21,10 +21,11 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
     ];
 
     return (
-      <div className="h-48 sm:h-56 md:h-64">
+      <div>
         <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-center">No-Show Rate Comparison</h4>
+        <div className="h-48 sm:h-56 md:h-64">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 10, right: 20, left: 10, bottom: 20 }}>
+          <BarChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
             <XAxis 
               dataKey="name" 
@@ -32,16 +33,13 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
               axisLine={false}
               tickLine={false}
               interval={0}
-              angle={-45}
-              textAnchor="end"
-              height={60}
             />
             <YAxis 
               tick={{ fontSize: 10 }}
               axisLine={false}
               tickLine={false}
               domain={[0, 30]}
-              label={{ value: 'No-Show Rate (%)', angle: -90, position: 'insideLeft', style: { fontSize: '10px' } }}
+              label={{ value: 'No-Show Rate (%)', angle: -90, position: 'insideLeft', style: { fontSize: '10px', textAnchor: 'middle' } }}
             />
             <Bar 
               dataKey="rate" 
@@ -54,6 +52,7 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
             </Bar>
           </BarChart>
         </ResponsiveContainer>
+        </div>
         <p className="text-xs sm:text-sm text-center text-gray-600 mt-6 sm:mt-4">
           40% reduction in no-shows = 13 percentage point improvement
         </p>
@@ -72,10 +71,11 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
     ];
 
     return (
-      <div className="h-48 sm:h-56 md:h-64">
+      <div>
         <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-center">Monthly Staff Hours Available</h4>
+        <div className="h-48 sm:h-56 md:h-64">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data} margin={{ top: 10, right: 20, left: 10, bottom: 20 }}>
+          <BarChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
             <XAxis 
               dataKey="month" 
@@ -87,12 +87,13 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
               tick={{ fontSize: 10 }}
               axisLine={false}
               tickLine={false}
-              label={{ value: 'Hours', angle: -90, position: 'insideLeft', style: { fontSize: '10px' } }}
+              label={{ value: 'Hours', angle: -90, position: 'insideLeft', style: { fontSize: '10px', textAnchor: 'middle' } }}
             />
             <Bar dataKey="traditional" fill={colors.gray} name="Traditional" radius={[4, 4, 0, 0]} />
             <Bar dataKey="withTelemedicine" fill={colors.primary} name="With Telemedicine" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
+        </div>
         <p className="text-xs sm:text-sm text-center text-gray-600 mt-6 sm:mt-4">
           +200 hours saved monthly for patient care focus
         </p>
@@ -107,8 +108,9 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
     ];
 
     return (
-      <div className="h-48 sm:h-56 md:h-64">
+      <div>
         <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-3 sm:mb-4 text-center">Patient Retention with Telehealth</h4>
+        <div className="h-48 sm:h-56 md:h-64">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -126,6 +128,7 @@ const BenefitsChart = ({ type }: BenefitsChartProps) => {
             </Pie>
           </PieChart>
         </ResponsiveContainer>
+        </div>
         <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-6 sm:mt-4 mb-2">
           <div className="flex items-center justify-center gap-2">
             <div className="w-3 h-3 rounded-full bg-brand-blue"></div>

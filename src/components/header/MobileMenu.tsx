@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import {
   ChevronDown,
   Monitor,
-  Globe,
   ShieldCheck,
   MessageCircle,
   HeartPulse,
@@ -13,8 +12,7 @@ import {
   Building,
   Users,
   ChevronRight,
-  LogIn,
-  HouseHeart
+  LogIn
 } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";

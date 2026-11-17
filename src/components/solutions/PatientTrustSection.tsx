@@ -1,10 +1,8 @@
 
 import React from "react";
 import { Shield, HeartPulse, Users } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const PatientTrustSection = () => {
-  const isMobile = useIsMobile();
   
   return (
     <div className="py-16 bg-gray-50">

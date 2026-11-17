@@ -2,87 +2,13 @@ import React from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
-import { Users, Heart, MapPin, TrendingDown, Shield, Globe, ChevronRight, CheckCircle, HelpCircle, Languages } from "lucide-react";
+import { Users, Heart, TrendingDown, Shield, Globe, ChevronRight, CheckCircle, HelpCircle, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // import LazyImage from "@/components/common/LazyImage";
 // import heroImage from "@/assets/images/public-health-community.jpg";
 // import telemedicineConsultationImage from "@/assets/images/telemedicine-consultation.jpg";
 
 const PublicHealth = () => {
-  const benefits = [
-    {
-      icon: <MapPin className="h-8 w-8 text-brand-blue" />,
-      title: "Reach Underserved Communities",
-      description: "Extend healthcare access to remote and underserved populations regardless of location."
-    },
-    {
-      icon: <TrendingDown className="h-8 w-8 text-brand-blue" />,
-      title: "Reduce Healthcare Costs",
-      description: "Lower operational costs while maintaining quality care delivery at scale."
-    },
-    {
-      icon: <Heart className="h-8 w-8 text-brand-blue" />,
-      title: "Improve Health Outcomes",
-      description: "Enable early intervention and continuous monitoring for better population health."
-    },
-    {
-      icon: <Globe className="h-8 w-8 text-brand-blue" />,
-      title: "Scalable Infrastructure",
-      description: "Deploy across multiple regions and communities with centralized management."
-    }
-  ];
-
-  const sectors = [
-    {
-      title: "Government Health Departments",
-      description: "Enable state and local health departments to provide accessible healthcare services to constituents.",
-      features: ["Multi-language support", "Population health analytics", "Emergency response capabilities", "Integration with public health systems"],
-      image: "/lovable-uploads/0ce55f94-e4dd-469d-9285-c94bef0a4ee6.png"
-    },
-    {
-      title: "Non-Profit Organizations",
-      description: "Empower NGOs to deliver healthcare services to vulnerable populations worldwide.",
-      features: ["Grant-friendly pricing", "Volunteer provider management", "Mobile-optimized platform", "Offline capabilities"],
-      image: "/lovable-uploads/0d52e95d-09fc-40f0-a772-a1ecd765215a.png"
-    },
-    {
-      title: "Community Health Centers",
-      description: "Support FQHCs and community clinics in expanding their reach and impact.",
-      features: ["HRSA compliance", "Sliding fee scale integration", "Community outreach tools", "Care coordination"],
-      image: "/lovable-uploads/0f21084b-83f6-4656-a125-78c04baa7310.png"
-    }
-  ];
-
-  const publicHealthFeatures = [
-    "Multi-language support for diverse populations",
-    "Population health management tools",
-    "Social determinants of health tracking",
-    "Community health worker integration",
-    "Emergency response and triage capabilities",
-    "Public health reporting and analytics",
-    "Grant compliance and documentation",
-    "Mobile-first design for field workers"
-  ];
-
-  const useCases = [
-    {
-      title: "Rural Health Programs",
-      description: "Bridge the healthcare gap in rural communities with specialist consultations and primary care services."
-    },
-    {
-      title: "Disaster Response",
-      description: "Rapidly deploy telemedicine services during natural disasters or public health emergencies."
-    },
-    {
-      title: "Preventive Care Initiatives",
-      description: "Implement population-wide screening programs and preventive health interventions."
-    },
-    {
-      title: "Mental Health Support",
-      description: "Provide mental health services to communities with limited access to behavioral health providers."
-    }
-  ];
-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -340,7 +266,7 @@ const PublicHealth = () => {
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-500 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Chintan</h3>
-                    <p className="text-sm sm:text-base text-gray-700">Healthcare access for Delhi's waste collection workers and families through trusted community networks</p>
+                    <p className="text-sm sm:text-base text-gray-700">Healthcare access for Delhi&apos;s waste collection workers and families through trusted community networks</p>
                   </div>
                 </div>
               </div>
@@ -439,7 +365,7 @@ const PublicHealth = () => {
             <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow duration-300">
               <h3 className="font-semibold text-lg mb-2 flex items-start text-brand-gray-dark">
                 <Globe className="h-5 w-5 text-brand-blue mr-3 flex-shrink-0 mt-1" />
-                Is DocGenie's platform suitable for large-scale public health programs?
+                Is DocGenie&apos;s platform suitable for large-scale public health programs?
               </h3>
               <p className="text-gray-600 ml-8">
                 Yes, our platform is scalable and designed to support wide-reaching initiatives with advanced analytics, multilingual support and dashboards to closely monitor patient health outcomes.
@@ -466,7 +392,7 @@ const PublicHealth = () => {
             Ready to Partner With Us?
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Building on these proven community models, we're scaling partnerships with government ministries and international NGOs for national health system integration and virtual training programs for frontline health workers. We also collaborate with community organizations working on complementary services like climate adaptation and mitigation.
+            Building on these proven community models, we&apos;re scaling partnerships with government ministries and international NGOs for national health system integration and virtual training programs for frontline health workers. We also collaborate with community organizations working on complementary services like climate adaptation and mitigation.
           </p>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Contact our Global Health team to explore partnership opportunities.

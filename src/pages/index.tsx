@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
@@ -12,13 +12,13 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import Head from "next/head";
 
 const Index = () => {
-  const logger = new LifecycleLogger("IndexPage");
+  const logger = useMemo(() => new LifecycleLogger("IndexPage"), []);
   
   // Log component lifecycle
   useEffect(() => {
     logger.mount();
     return () => logger.unmount();
-  }, []);
+  }, [logger]);
   
   // Debug component props (empty in this case)
   debugComponent("Index", {});

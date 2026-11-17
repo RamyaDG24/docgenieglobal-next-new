@@ -104,7 +104,7 @@ const PricingCard = ({
       <div className="px-8 pb-8 flex-grow flex flex-col">
         <h4 className="font-medium text-gray-800 mb-4 flex items-center gap-2">
           <Check className={`h-5 w-5 ${checkIconClass}`} />
-          What's included:
+          What&apos;s included:
         </h4>
         <ul className="space-y-3 mb-8 flex-grow">
           {filteredFeatures.map((feature, index) => (

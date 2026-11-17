@@ -1,10 +1,8 @@
 
 import React from "react";
 import { ShieldCheck, LockKeyhole, ClipboardList } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const DataSecuritySection = () => {
-  const isMobile = useIsMobile();
   
   return (
     <div className="py-16 bg-white">

@@ -1,14 +1,9 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+const imageSrc = "/lovable-uploads/ae06b433-da1b-4356-810a-119494b3568c.png";
 
 const OurStorySection = () => {
-  const [imageSrc, setImageSrc] = useState("");
-
-  useEffect(() => {
-    // Set the new image path to the uploaded image
-    setImageSrc("/lovable-uploads/ae06b433-da1b-4356-810a-119494b3568c.png");
-  }, []);
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 items-center">
       <div className="order-2 md:order-1 text-center">

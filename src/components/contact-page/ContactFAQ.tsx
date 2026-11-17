@@ -19,7 +19,7 @@ const ContactFAQ = () => {
             What makes DocGenie the best telemedicine platform for my clinic?
           </AccordionTrigger>
           <AccordionContent className="text-gray-700">
-            DocGenie combines white label capabilities, HIPAA compliance, and a comprehensive feature set designed specifically for healthcare providers. Our platform is fully customizable to match your clinic's branding while providing reliable virtual care services that your patients will love.
+            DocGenie combines white label capabilities, HIPAA compliance, and a comprehensive feature set designed specifically for healthcare providers. Our platform is fully customizable to match your clinic&apos;s branding while providing reliable virtual care services that your patients will love.
           </AccordionContent>
         </AccordionItem>
 
@@ -46,16 +46,16 @@ const ContactFAQ = () => {
             What benefits will my practice gain from implementing a telemedicine solution?
           </AccordionTrigger>
           <AccordionContent className="text-gray-700">
-            Implementing DocGenie's telemedicine solution provides numerous benefits: increased patient satisfaction, expanded geographic reach, reduced no-shows, improved workflow efficiency, new revenue opportunities, and competitive advantage in the healthcare market. Our platform helps you deliver care to more patients while maintaining quality and reducing operational costs.
+            Implementing DocGenie&apos;s telemedicine solution provides numerous benefits: increased patient satisfaction, expanded geographic reach, reduced no-shows, improved workflow efficiency, new revenue opportunities, and competitive advantage in the healthcare market. Our platform helps you deliver care to more patients while maintaining quality and reducing operational costs.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-5">
           <AccordionTrigger className="text-lg font-medium text-left">
-            How quickly can I implement DocGenie's virtual healthcare platform?
+            How quickly can I implement DocGenie&apos;s virtual healthcare platform?
           </AccordionTrigger>
           <AccordionContent className="text-gray-700">
-            Most healthcare providers can implement our virtual care platform in just 2-4 weeks. Our team provides comprehensive onboarding support, including staff training, integration with your existing systems, and customization of the platform to match your workflow. We're committed to ensuring a smooth and efficient transition to telemedicine.
+            Most healthcare providers can implement our virtual care platform in just 2-4 weeks. Our team provides comprehensive onboarding support, including staff training, integration with your existing systems, and customization of the platform to match your workflow. We&apos;re committed to ensuring a smooth and efficient transition to telemedicine.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

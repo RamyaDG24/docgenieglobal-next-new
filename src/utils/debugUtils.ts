@@ -1,7 +1,7 @@
 /**
  * Debug utility for tracking component rendering and props
  */
-export const debugComponent = (componentName: string, props: any, enabled = true) => {
+export const debugComponent = (componentName: string, props: Record<string, unknown>, enabled = true) => {
   // Silence in production regardless of the `enabled` flag, and allow opt-out in dev.
   if (process.env.NODE_ENV === 'production' || !enabled) return;
   
@@ -65,7 +65,7 @@ export class LifecycleLogger {
     console.log(`🔴 ${this.componentName} unmounted`);
   }
 
-  update(prevProps: any, nextProps: any) {
+  update(prevProps: Record<string, unknown>, nextProps: Record<string, unknown>) {
     if (!this.enabled) return;
     console.log(`🔄 ${this.componentName} updated`, {
       prevProps,
@@ -74,9 +74,9 @@ export class LifecycleLogger {
     });
   }
   
-  private getChangedProps(prevProps: any, nextProps: any) {
+  private getChangedProps(prevProps: Record<string, unknown>, nextProps: Record<string, unknown>) {
     const allKeys = new Set([...Object.keys(prevProps), ...Object.keys(nextProps)]);
-    const changes: Record<string, { from: any, to: any }> = {};
+    const changes: Record<string, { from: unknown, to: unknown }> = {};
     
     allKeys.forEach(key => {
       if (prevProps[key] !== nextProps[key]) {

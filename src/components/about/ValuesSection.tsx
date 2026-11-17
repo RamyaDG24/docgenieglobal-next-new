@@ -1,10 +1,8 @@
 
 import React from "react";
 import { Heart, Globe, Award, Sparkles, Target, Users } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const ValuesSection = () => {
-  const isMobile = useIsMobile();
   
   const values = [
     {

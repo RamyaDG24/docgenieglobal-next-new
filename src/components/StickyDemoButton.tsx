@@ -26,10 +26,11 @@ const StickyDemoButton = () => {
     // Re-query on every route change (Layout persists across pages in Pages Router)
     const heroCta = document.querySelector("[data-hero-cta]");
 
-    // No hero CTA on this page → just show the sticky button
+    // No hero CTA on this page → just show the sticky button (on the next
+    // frame; the button fades in over 300 ms anyway).
     if (!heroCta) {
-      setIsVisible(true);
-      return;
+      const frame = requestAnimationFrame(() => setIsVisible(true));
+      return () => cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(

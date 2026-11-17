@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'ne
 import BlogPostView from '@/components/blog-post/BlogPostView';
 import { blogData } from '@/data/blogs/blogData';
 import { generateSlug } from '@/lib/blog-slug';
-import type { BlogPost } from '@/data/blogs/types';
+import type { BlogPost, BlogSection } from '@/data/blogs/types';
 import Layout from '@/components/Layout';
 import { generateSections } from '@/lib/sectionUtils';
 
@@ -28,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{
   post: BlogPost;
-  sections: any[];
+  sections: BlogSection[];
 }> = async ({ params }) => {
   const slug = params?.slug as string;
   const post = findBlogBySlug(slug);

@@ -1,7 +1,8 @@
 // src/components/blog-post/SocialSharing.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useBrowserValue } from '@/hooks/use-browser-value';
 import { Share2, Mail, Link2, Check } from 'lucide-react';
 import { BlogPost } from '@/data/blogs/types';
 
@@ -29,14 +30,10 @@ const LinkedinIcon = () => (
 );
 
 const SocialSharing = ({ blog }: SocialSharingProps) => {
-  const [currentUrl, setCurrentUrl] = useState('');
+  // Browser-only values: empty/false on the server and the first render.
+  const currentUrl = useBrowserValue(() => window.location.href, '');
+  const canNativeShare = useBrowserValue(() => !!navigator.share, false);
   const [copied, setCopied] = useState(false);
-  const [canNativeShare, setCanNativeShare] = useState(false);
-
-  useEffect(() => {
-    setCurrentUrl(window.location.href);
-    setCanNativeShare(typeof navigator !== 'undefined' && !!navigator.share);
-  }, []);
 
   const title = encodeURIComponent(blog.title);
   const url = encodeURIComponent(currentUrl);

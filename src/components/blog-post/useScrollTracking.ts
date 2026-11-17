@@ -13,11 +13,6 @@ export const useScrollTracking = (sections: Section[], isLoading: boolean) => {
 
   useEffect(() => {
     if (isLoading || sections.length === 0) return;
-    
-    // Initialize with the first section
-    if (sections.length > 0 && !activeSection) {
-      setActiveSection(sections[0].id);
-    }
 
     const handleScroll = () => {
       if (isLoading) return;
@@ -52,7 +47,8 @@ export const useScrollTracking = (sections: Section[], isLoading: boolean) => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [sections, isLoading, activeSection]);
+  }, [sections, isLoading]);
 
-  return activeSection;
+  // Until a section has been tracked, the first section is the active one.
+  return activeSection ?? (sections.length > 0 ? sections[0].id : null);
 };

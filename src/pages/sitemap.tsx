@@ -175,7 +175,7 @@ const Sitemap = () => {
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
             <h2 className="text-xl font-semibold mb-3 text-gray-900">Need help finding something?</h2>
             <p className="text-gray-700 mb-4">
-              If you can't find what you're looking for, please contact our support team for assistance.
+              If you can&apos;t find what you&apos;re looking for, please contact our support team for assistance.
             </p>
             <Link 
               href="/contact" 

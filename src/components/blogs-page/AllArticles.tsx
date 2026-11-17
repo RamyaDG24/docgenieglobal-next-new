@@ -24,10 +24,13 @@ const AllArticles = ({ blogs, activeCategory, setActiveCategory }: AllArticlesPr
   const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
   
-  // Reset to first page when category changes
-  useEffect(() => {
+  // Back to the first page when the category changes (React's "adjust state
+  // while rendering" pattern: compare with the previous category).
+  const [prevCategory, setPrevCategory] = useState(activeCategory);
+  if (prevCategory !== activeCategory) {
+    setPrevCategory(activeCategory);
     setCurrentPage(1);
-  }, [activeCategory]);
+  }
 
   // Add debug logging to verify data
   useEffect(() => {

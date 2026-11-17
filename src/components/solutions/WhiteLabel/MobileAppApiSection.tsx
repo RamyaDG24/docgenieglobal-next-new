@@ -78,7 +78,7 @@ const MobileAppApiSection = () => {
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mb-10 md:mb-12">
                     {/* Spacing lives on wrapper divs, not on the headings and
-                        paragraphs themselves: /assets/original.css ships an unlayered
+                        paragraphs themselves: src/styles/original.css ships an unlayered
                         reset that zeroes the margin on h1-h6, p and similar elements,
                         and unlayered rules beat Tailwind v4's layered utilities, so a
                         margin utility placed directly on a heading or paragraph is

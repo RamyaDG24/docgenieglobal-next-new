@@ -5,14 +5,12 @@ import SolutionHero from "@/components/solutions/SolutionHero";
 import FeatureSection from "@/components/solutions/FeatureSection";
 import SolutionCTA from "@/components/solutions/SolutionCTA";
 import { Brain, Bot, Sparkles, Zap, FileSearch } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
 import Head from "next/head";
 import RelatedSolutions from "@/components/solutions/RelatedSolutions";
 import FAQ from "@/components/solutions/AICapabilities/FAQ";
 import { aiCapabilitiesFAQSchema } from "@/components/solutions/AICapabilities/SchemaData";
 
 const AICapabilities = () => {
-  const isMobile = useIsMobile();
   
   // Schema.org JSON-LD structured data for AI Capabilities
   const schemaData = {
@@ -205,7 +203,7 @@ const AICapabilities = () => {
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold mb-2 text-left">Personalized Health Content</h3>
                     <p className="text-gray-600 text-left">
-                      Automatically curated educational resources tailored to each patient's specific conditions, literacy level, and learning preferences.
+                      Automatically curated educational resources tailored to each patient&apos;s specific conditions, literacy level, and learning preferences.
                     </p>
                   </div>
                 </div>

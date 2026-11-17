@@ -23,7 +23,7 @@ const TermsOfService = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
             <div className="prose max-w-none text-gray-700">
               <p className="mb-4">
-                Welcome to DocGenie Global. These Terms of Service ("Terms") govern your use of our website and telemedicine platform provided by DocGenie Global Pte Ltd ("we," "us," or "our"). By accessing or using our services, you agree to be bound by these Terms.
+                Welcome to DocGenie Global. These Terms of Service (&quot;Terms&quot;) govern your use of our website and telemedicine platform provided by DocGenie Global Pte Ltd (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using our services, you agree to be bound by these Terms.
               </p>
 
               <h2 className="text-xl font-semibold mt-8 mb-4">1. Acceptance of Terms</h2>

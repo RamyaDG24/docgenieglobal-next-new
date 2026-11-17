@@ -2,16 +2,15 @@
 import React, { useState } from 'react';
 import { CalendarIcon, Clock, Globe } from 'lucide-react';
 import { BlogPost } from '@/data/blogs/types';
-import Link from "next/link";
 import { cn } from '@/lib/utils';
-import { generateSlug } from '@/lib/blog-slug';
+import {  } from '@/lib/blog-slug';
 import { Skeleton } from '@/components/ui/skeleton';
 
 interface LatestNewsProps {
   latestBlog: BlogPost;
 }
 
-const LatestNews = ({ latestBlog }: LatestNewsProps) => {
+const LatestNews: React.FC<LatestNewsProps> = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
   
   // For the DocGenie global announcement article

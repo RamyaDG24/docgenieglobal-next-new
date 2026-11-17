@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
-import { User, Users, Heart, MapPin, TrendingDown, Shield, Globe, ChevronRight, CheckCircle, HelpCircle, Languages, Hospital, HouseHeart, Cross, MapPinHouseIcon, BuildingIcon } from "lucide-react";
+import { ChevronRight, CheckCircle, Hospital, HouseHeart, MapPinHouseIcon, BuildingIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PublicHealth = () => {

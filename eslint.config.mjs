@@ -14,7 +14,16 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // AWS Lambda build output (aws/build-lambda.mjs)
     "aws/dist/**",
+    // Static files served as they are (minified third-party scripts), not source.
+    "public/**",
   ]),
+  {
+    rules: {
+      // The site serves plain <img> on purpose: next/image needs Next.js's image
+      // optimizer, which the AWS Lambda build leaves out (no sharp).
+      "@next/next/no-img-element": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

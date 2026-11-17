@@ -2,9 +2,8 @@ import React from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
-import { Hospital, Users, Clock, DollarSign, Shield, TrendingUp, CheckCircle, ChevronRight, HelpCircle, Settings } from "lucide-react";
+import { Hospital, Users, Clock, DollarSign, TrendingUp, CheckCircle, ChevronRight, HelpCircle, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LazyImage from "@/components/common/LazyImage";
 // import heroImage from "@/assets/images/healthcare-providers-dashboard.png";
 // import multiSpecialtyClinicImage from "@/assets/images/multi-specialty-clinic.png";
 
@@ -309,7 +308,7 @@ const HealthcareProviders = () => {
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-6">Tailored for Every Type of Practice</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Whether you're a solo practitioner or part of a large healthcare system, our platform adapts to your specific needs.
+              Whether you&apos;re a solo practitioner or part of a large healthcare system, our platform adapts to your specific needs.
             </p>
           </div>
           
@@ -359,7 +358,7 @@ const HealthcareProviders = () => {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                "With secure communication tools and AI-driven insights, managing chronic digestive conditions has become more streamlined. The platform's data analytics help me make informed decisions in real time."
+                &quot;With secure communication tools and AI-driven insights, managing chronic digestive conditions has become more streamlined. The platform&apos;s data analytics help me make informed decisions in real time.&quot;
               </p>
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -380,7 +379,7 @@ const HealthcareProviders = () => {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                "DocGenie's telemedicine platform has revolutionized how I interact with my patients. The seamless video consultations and integrated EMR system have made remote care effortless and efficient."
+                &quot;DocGenie&apos;s telemedicine platform has revolutionized how I interact with my patients. The seamless video consultations and integrated EMR system have made remote care effortless and efficient.&quot;
               </p>
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -401,7 +400,7 @@ const HealthcareProviders = () => {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                "The ease of scheduling and patient management has significantly improved my clinic's efficiency. Patients find it incredibly convenient to consult online without compromising on quality care."
+                &quot;The ease of scheduling and patient management has significantly improved my clinic&apos;s efficiency. Patients find it incredibly convenient to consult online without compromising on quality care.&quot;
               </p>
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -437,7 +436,7 @@ const HealthcareProviders = () => {
             <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow duration-300">
               <h3 className="font-semibold text-lg mb-2 flex items-start text-brand-gray-dark">
                 <Settings className="h-5 w-5 text-brand-blue mr-3 flex-shrink-0 mt-1" />
-                Is DocGenie's platform compatible with existing EHR systems?
+                Is DocGenie&apos;s platform compatible with existing EHR systems?
               </h3>
               <p className="text-gray-600 ml-8">
                 Yes, the platform supports seamless integration with popular EHR systems to maintain accurate and continuous patient records.
