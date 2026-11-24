@@ -10,7 +10,7 @@ import Head from "next/head";
 import FAQ from "@/components/solutions/FAQ";
 import PatientTrustSection from "@/components/solutions/PatientTrustSection";
 import RelatedSolutions from "@/components/solutions/RelatedSolutions";
-import BrandTrustSection from "@/components/solutions/WhiteLabel/BrandTrustSection";
+import WhatsIncludedSection from "@/components/solutions/WhiteLabel/WhatsIncludedSection";
 import PerformanceSection from "@/components/solutions/WhiteLabel/PerformanceSection";
 import ResultSection from "@/components/solutions/WhiteLabel/ResultSection";
 import LeadMarketSection from "@/components/solutions/WhiteLabel/LeadMarketSection";
@@ -27,8 +27,8 @@ const WhiteLabelTelemedicine = () => {
   return (
     <Layout>
       <Head>
-        <title>White Label Telemedicine Platform | Live in Weeks | DocGenie</title>
-        <meta name="description" content="License and rebrand a HIPAA-compliant telemedicine platform — your logo, domain and patient portal. Live in weeks, not months. Book a demo." />
+        <title>White-Label Telemedicine &amp; Telehealth Platform | DocGenie</title>
+        <meta name="description" content="Run virtual consultations under your own brand with DocGenie&apos;s white-label telehealth platform. Explore the patient portal, mobile access, and integrations." />
         <link rel="canonical" href="https://www.docgenieglobal.com/solutions/white-label-telemedicine/" />
         <link rel="preload" as="image" href="/lovable-uploads/9e6e81c2-be85-41ae-9ba0-dfbb95ee96f3.png" />
 
@@ -70,8 +70,8 @@ const WhiteLabelTelemedicine = () => {
       
       <ErrorBoundary>
         <SolutionHero 
-          title="White Label Telemedicine Platform"
-          description="Fully branded virtual care experience across web, tablet, and phone — with your logo, colours, domain, and patient portal."
+          title="White-Label Telemedicine Platform"
+          description="Offer virtual consultations under your own brand, with a patient portal on your domain. Patients can book appointments and join video visits from their phone, tablet, or computer."
           image="/lovable-uploads/9e6e81c2-be85-41ae-9ba0-dfbb95ee96f3.png"
           altText="Medical professional using white-labeled DocGenie telemedicine platform with customized branding for virtual consultation with patient"
         />
@@ -92,11 +92,11 @@ const WhiteLabelTelemedicine = () => {
       </ErrorBoundary>
 
       <ErrorBoundary>
-        <QuickAnswerSection />
+        <WhatsIncludedSection />
       </ErrorBoundary>
 
       <ErrorBoundary>
-        <BrandTrustSection />
+        <QuickAnswerSection />
       </ErrorBoundary>
 
       <ErrorBoundary>

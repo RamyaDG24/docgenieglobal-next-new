@@ -105,8 +105,8 @@ const PlatformScopeSection = () => {
 
         <p className="text-center text-gray-700 mt-10 max-w-3xl mx-auto">
           If branding and ownership of the patient relationship is the deciding factor for you, the{" "}
-          <Link href="/solutions/white-label-telemedicine/" className="text-brand-blue underline">
-            white label telemedicine platform
+          <Link href="/solutions/white-label-telemedicine/#patient-portal" className="text-brand-blue underline">
+            branded patient portal
           </Link>{" "}
           page covers that side in full, including what can be rebranded and how build-versus-buy
           compares.
