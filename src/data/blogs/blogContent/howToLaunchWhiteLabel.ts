@@ -38,7 +38,7 @@ export const howToLaunchWhiteLabelContent: BlogContent = {
 
       * Logo, colour palette, and typography applied across all patient-facing and provider-facing interfaces
       * Custom domain or subdomain setup — patients access the platform at your URL, not the vendor's
-      * Patient portal layout and onboarding flow configuration
+      * <a href='/solutions/white-label-telemedicine/#patient-portal'>Branded patient portal</a> layout and onboarding flow configuration
       * Appointment type setup: consultation lengths, specialties, provider availability windows
       * Patient communication templates: booking confirmations, appointment reminders, post-visit follow-up messages
       * Provider dashboard configuration: consultation workflow, notes templates, handoff procedures
@@ -55,7 +55,7 @@ export const howToLaunchWhiteLabelContent: BlogContent = {
       * **Calendar and scheduling system** integration if providers manage availability in an existing system
       * **Patient communication tools** if your practice uses existing SMS or email systems for patient outreach
 
-      Integration setup is the most variable phase in terms of time. A platform with no EHR integration may take days to configure. A deep bi-directional EHR integration with custom field mapping may take several weeks.`
+      Integration setup is the most variable phase in terms of time. A platform with no EHR integration may take days to configure. A deep bi-directional EHR integration with custom field mapping may take several weeks. For how this runs on the DocGenie platform, see <a href='/solutions/white-label-telemedicine/#api-onboarding'>branded patient app and API integration</a>.`
     },
     {
       id: 'staff-training-and-testing',
@@ -95,5 +95,5 @@ export const howToLaunchWhiteLabelContent: BlogContent = {
     }
   ],
 
-  conclusion: "Launching a <a href='/solutions/white-label-telemedicine/'>white label telemedicine platform</a> is a structured process with a clear sequence of steps. The most common mistake US healthcare providers make is underestimating the importance of step one — defining the virtual care model — before evaluating any technology. Providers who do the planning work upfront move faster through implementation and go live with fewer surprises.\n\nFor a deeper look at compliance obligations before launch, see our guide on <a href='/blogs/hipaa-compliance-telemedicine-us-healthcare/'>HIPAA Compliance for Telemedicine Platforms</a>. For pricing expectations, see <a href='/blogs/white-label-telemedicine-platform-pricing/'>White Label Telemedicine Platform Pricing</a>. And to see the platform built for this market, visit our <a href='/us/white-label-telemedicine-platform/'>telemedicine platform for US healthcare providers</a>."
+  conclusion: "Launching a <a href='/solutions/white-label-telemedicine/'>white-label telemedicine platform</a> is a structured process with a clear sequence of steps. The most common mistake US healthcare providers make is underestimating the importance of step one — defining the virtual care model — before evaluating any technology. Providers who do the planning work upfront move faster through implementation and go live with fewer surprises.\n\nFor a deeper look at compliance obligations before launch, see our guide on <a href='/blogs/hipaa-compliance-telemedicine-us-healthcare/'>HIPAA Compliance for Telemedicine Platforms</a>. For pricing expectations, see <a href='/blogs/white-label-telemedicine-platform-pricing/'>White Label Telemedicine Platform Pricing</a>. And to see the platform built for this market, visit our <a href='/us/white-label-telemedicine-platform/'>telemedicine platform for US healthcare providers</a>."
 };

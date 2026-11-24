@@ -45,26 +45,31 @@ const MobileAppApiSection = () => {
     const onboardingStages = [
         {
             title: "Discovery",
+            outcome: "Scope agreed",
             description:
                 "Business requirements, regulatory constraints and success metrics are agreed, along with source-system access, test data and technical contacts.",
         },
         {
             title: "Technical design review",
+            outcome: "Architecture confirmed",
             description:
                 "Solution architecture is reviewed, including whether a multi-tenant or single-tenant deployment fits your scope.",
         },
         {
             title: "API enablement and environments",
+            outcome: "Your team can start building",
             description:
                 "Integration guides are issued and environments provisioned so your team can build and test against the platform.",
         },
         {
             title: "Identity and branding configuration",
+            outcome: "SSO and branding in place",
             description:
                 "Identity/SSO configuration and endpoint whitelisting are completed alongside white-label branding setup.",
         },
         {
             title: "Go-live",
+            outcome: "Live and monitored",
             description:
                 "Security controls, monitoring and observability are confirmed, then go-live is orchestrated with post-launch optimisation.",
         },
@@ -72,8 +77,9 @@ const MobileAppApiSection = () => {
 
     return (
         <section
-            className="py-10 sm:py-16 md:py-24 bg-gray-50"
-            aria-labelledby="mobile-api-heading"
+            id="api-onboarding"
+            className="scroll-mt-24 py-10 sm:py-16 md:py-24 bg-gray-50"
+            aria-labelledby="api-onboarding-heading"
         >
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mb-10 md:mb-12">
@@ -84,8 +90,8 @@ const MobileAppApiSection = () => {
                         margin utility placed directly on a heading or paragraph is
                         silently dropped site-wide. */}
                     <div className="mb-4 sm:mb-6">
-                        <h2 id="mobile-api-heading" className="heading-3">
-                            Mobile app and API onboarding
+                        <h2 id="api-onboarding-heading" className="heading-3">
+                            Branded Patient App and API Integration
                         </h2>
                     </div>
                     <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
@@ -195,10 +201,17 @@ const MobileAppApiSection = () => {
 
                 {/* Onboarding path */}
                 <div className="mt-12 md:mt-16">
-                    <div className="mb-6">
+                    <div className="mb-2">
                         <h3 className="text-lg sm:text-xl font-semibold text-left">
                             How API onboarding works
                         </h3>
+                    </div>
+                    <div className="mb-6">
+                        <p className="text-sm sm:text-base text-gray-600 text-left">
+                            Five stages, run with your engineering team. Which integrations are
+                            available at each stage depends on your existing systems, available
+                            APIs and implementation scope.
+                        </p>
                     </div>
                     <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {onboardingStages.map((stage, index) => (
@@ -213,6 +226,11 @@ const MobileAppApiSection = () => {
                                     <h4 className="ml-3 text-base font-semibold text-left">
                                         {stage.title}
                                     </h4>
+                                </div>
+                                <div className="mb-2">
+                                    <p className="text-sm font-medium text-brand-blue text-left">
+                                        {stage.outcome}
+                                    </p>
                                 </div>
                                 <p className="text-sm text-gray-600 text-left">
                                     {stage.description}

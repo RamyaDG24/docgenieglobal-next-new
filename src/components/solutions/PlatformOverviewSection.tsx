@@ -9,7 +9,7 @@ const PlatformOverviewSection = () => {
     {
       title: "White Label Telemedicine",
       description: "DocGenie provides a comprehensive telemedicine solution that can be fully customized to match your brand identity and specific healthcare needs.",
-      path: "/solutions/white-label-telemedicine"
+      path: "/solutions/white-label-telemedicine/"
     },
     {
       title: "HIPAA Compliant Healthcare",
@@ -65,8 +65,8 @@ const PlatformOverviewSection = () => {
               ))}
             </div>
             
-            <Link href="/solutions/white-label-telemedicine">
-              <Button className="primary-button">Learn More About White Label Solutions</Button>
+            <Link href="/solutions/white-label-telemedicine/">
+              <Button className="primary-button">Explore the white-label telemedicine platform</Button>
             </Link>
           </div>
         </div>
