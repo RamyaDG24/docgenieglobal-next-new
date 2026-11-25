@@ -5,6 +5,19 @@ export const howToLaunchWhiteLabelContent: BlogContent = {
 
   sections: [
     {
+      id: 'launch-checklist',
+      title: "White-Label Telemedicine Launch Checklist",
+      content: `Use this before you commit to a go-live date. Each item names what to verify, who owns it, and what must be finished before you launch. The six steps below the checklist explain each area in detail.
+
+      * **Branded domain and portal.** <em>Check:</em> your domain or subdomain resolves to the patient portal, and your logo, colour palette and typography appear on every patient-facing and provider-facing screen — with no vendor-branded elements left visible. <em>Owner:</em> your IT or web team, with the vendor's implementation team. <em>Ready before go-live:</em> DNS pointed and verified, branding assets supplied and applied, and the portal reachable at your URL rather than the vendor's.
+      * **Patient booking.** <em>Check:</em> consultation types, lengths, specialties and provider availability windows match how your clinic actually schedules, and booking confirmations and reminders go out under your brand. <em>Owner:</em> your clinic operations lead, with input from the providers who will take the appointments. <em>Ready before go-live:</em> every consultation type booked end-to-end against a test patient, availability loaded for each launch-day provider, and confirmation, reminder and follow-up templates approved.
+      * **Video visit testing.** <em>Check:</em> patients can join a visit from the browser on both desktop and mobile, and providers can run the consultation interface, document notes and complete post-visit handoffs. <em>Owner:</em> your clinical lead, with IT for network and device issues. <em>Ready before go-live:</em> at least one full test visit per launch-day provider on desktop and on mobile, with audio and video confirmed on the networks and devices your clinic actually uses.
+      * **Staff readiness.** <em>Check:</em> providers are trained on joining consultations, the consultation interface, documentation and handoffs; admin staff are trained on appointment management, patient queries, reporting and common troubleshooting. <em>Owner:</em> your practice manager. <em>Ready before go-live:</em> every launch-day provider and admin has completed training and walked one supervised patient journey end-to-end, and a named internal contact is assigned for day-one issues.
+      * **Integration testing.** <em>Check:</em> data flows correctly in both directions between the platform and your EHR/EMR, payment system and any other connected tools. Which integrations apply, and the exact approach, are confirmed during technical discovery based on your existing systems and implementation scope. <em>Owner:</em> your IT or integration lead, with the vendor's implementation team. <em>Ready before go-live:</em> each agreed integration tested with realistic test data, field mapping signed off, failure handling understood, and a signed BAA in place before any patient data flows through the vendor's systems.
+
+      If any item on this list is unresolved, move the go-live date rather than launching around it. The problems that damage trust in a new virtual care service are almost always the ones a team knew about and launched anyway.`
+    },
+    {
       id: 'define-your-virtual-care-model',
       title: "Step 1: Define Your Virtual Care Model",
       content: `Before evaluating any <a href='/us/white-label-telemedicine-platform/'>telemedicine platform for the US market</a>, be clear on what virtual care means for your organisation. The answers to these questions determine your platform configuration requirements and which integrations you need from day one:
