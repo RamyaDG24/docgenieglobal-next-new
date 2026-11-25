@@ -17,7 +17,7 @@ export const whiteLabelPricingGuideContent: BlogContent = {
 
       **Custom enterprise pricing:** For health systems, large multi-specialty groups, and digital health companies with complex requirements, pricing is typically negotiated based on scale, integration scope, branding requirements, and support model. Ranges vary widely — from tens of thousands annually for smaller organisations to hundreds of thousands for large systems.
 
-      See <a href='/pricing/'>DocGenie Global's pricing</a> for indicative ranges relevant to your organisation size.`
+      Visit our <a href='/pricing/'>pricing page</a> to request a tailored quote.`
     },
     {
       id: 'what-drives-cost',
@@ -79,7 +79,9 @@ export const whiteLabelPricingGuideContent: BlogContent = {
       * **What support model do you need post-launch?** Self-serve, standard ticketed support, or dedicated account management?
       * **Do you have existing infrastructure** (domain, patient communication tools, payment gateway) that needs to be integrated?
 
-      Vendors who give you a meaningful quote without these details are not quoting your actual requirements — they are giving you a range that may not reflect your situation.`
+      Vendors who give you a meaningful quote without these details are not quoting your actual requirements — they are giving you a range that may not reflect your situation.
+
+      See what's included in our <a href='/solutions/white-label-telemedicine/'>white-label telemedicine platform</a>, from a branded patient portal and custom domain to appointment booking and video consultations.`
     },
     {
       id: 'negotiation-and-contracts',
